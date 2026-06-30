@@ -6,15 +6,20 @@
 <title>الملخص الصيدلاني الشامل التفاعلي — Community Pharmacist Exam Prep</title>
 <style>
 *{box-sizing:border-box}
-html,body{margin:0;padding:0}
+html,body{margin:0;padding:0;width:100%;max-width:100%;overflow-x:hidden}
 body{font-family:"Segoe UI","Tahoma",Arial,sans-serif;background:#0f1f33;color:#1a202c}
+img{max-width:100%;height:auto}
+.tabwrap,.tabpanel{width:100%;max-width:100%;overflow-x:hidden}
+.tabpanel table{display:block;width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tabpanel pre,.tabpanel code{white-space:pre-wrap;word-break:break-word}
+.tabpanel *{max-width:100%}
 #appbar{position:sticky;top:0;z-index:1000;background:linear-gradient(135deg,#0f2744,#1b3a5f);color:#fff;padding:16px 20px;box-shadow:0 2px 14px rgba(0,0,0,.35)}
 #appbar h1{margin:0;font-size:20px;font-weight:800}
 #appbar p{margin:4px 0 0;font-size:13px;color:#bcd2ea;font-weight:600}
 #appbar .prepby{font-size:16px;font-weight:800;color:#fff;margin-bottom:8px}
 #appbar .wa-btn{display:inline-flex;align-items:center;gap:6px;background:#25d366;color:#0b2e13;font-weight:800;font-size:14px;text-decoration:none;padding:8px 14px;border-radius:22px;margin-bottom:12px;box-shadow:0 2px 8px rgba(37,211,102,.4);transition:.15s}
 #appbar .wa-btn:hover{background:#1ebe5b;transform:translateY(-1px)}
-#tabnav{position:sticky;top:0;z-index:999;background:#13294b;display:flex;flex-wrap:wrap;gap:6px;padding:10px;border-bottom:3px solid #2c7a7b;box-shadow:0 3px 10px rgba(0,0,0,.25)}
+#tabnav{position:sticky;top:0;z-index:999;width:100%;max-width:100%;background:#13294b;display:flex;flex-wrap:wrap;gap:6px;padding:10px;border-bottom:3px solid #2c7a7b;box-shadow:0 3px 10px rgba(0,0,0,.25)}
 .tabbtn{font-family:inherit;cursor:pointer;border:1px solid #2c5282;background:#1f3a68;color:#cfe0f5;font-size:14px;font-weight:700;padding:9px 14px;border-radius:8px;transition:.15s}
 .tabbtn:hover{background:#2c5282;color:#fff}
 .tabbtn[data-active]{background:#2c7a7b;color:#fff;border-color:#2c7a7b;box-shadow:0 2px 8px rgba(44,122,123,.5)}
@@ -22,6 +27,16 @@ body{font-family:"Segoe UI","Tahoma",Arial,sans-serif;background:#0f1f33;color:#
 .tabpanel{animation:fade .25s ease}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 #totop{position:fixed;bottom:22px;left:22px;z-index:1100;background:#2c7a7b;color:#fff;border:none;width:48px;height:48px;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.3);display:none}
+@media(max-width:680px){
+  #appbar{padding:12px 14px}
+  #appbar h1{font-size:17px}
+  #appbar p{font-size:12px}
+  #appbar .prepby{font-size:15px}
+  #appbar .wa-btn{font-size:13px;padding:7px 12px}
+  #tabnav{gap:5px;padding:8px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tabbtn{font-size:13px;padding:8px 11px;white-space:nowrap;flex:0 0 auto}
+  #totop{bottom:16px;left:16px;width:42px;height:42px;font-size:17px}
+}
 /* ===== respiratory ===== */
 #tab-respiratory{
   --navy:#0f2744; --navy2:#1b3a5f; --blue:#2c5f8a; --lightblue:#e8f1f8;
